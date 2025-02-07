@@ -21,14 +21,6 @@ Core Data é uma solução poderosa da Apple para gerenciar objetos e suas rela�
 Uso -
 Ideal para armazenar grandes volumes de dados estruturados, gerenciar relacionamentos complexos e suporte a consultas avançadas.
 
-Exemplo:
-// Modelo simplificado para adicionar um novo objeto
-let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-
-let newUser = User(context: context)
-newUser.name = "John"
-newUser.age = 30
-
 ![Screenshot 2025-02-06 at 15 42 50](https://github.com/user-attachments/assets/d48b6e61-c879-43df-962b-fd301166287f)
 
 
