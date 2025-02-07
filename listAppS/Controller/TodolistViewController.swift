@@ -115,7 +115,6 @@ extension TodolistViewController: UISearchBarDelegate  {
             DispatchQueue.main.async {
                 searchBar.resignFirstResponder()
             }
-            searchBar.resignFirstResponder()
         }
     }
 }
