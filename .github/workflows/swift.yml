@@ -18,7 +18,7 @@ jobs:
 
     - name: Build the project
       run: |
-        xcodebuild -scheme listAppS -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 11' clean build
+        xcodebuild -scheme listAppS -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 11' clean build -allowProvisioningUpdates
 
     - name: Run tests
       run: |
