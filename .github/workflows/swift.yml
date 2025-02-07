@@ -18,8 +18,8 @@ jobs:
 
     - name: Build the project
       run: |
-        xcodebuild -scheme YourSchemeName -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 11' clean build
+        xcodebuild -scheme listAppS -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 11' clean build
 
     - name: Run tests
       run: |
-        xcodebuild test -scheme YourSchemeName -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 11' | xcpretty
+        xcodebuild test -scheme listAppS -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 11' | xcpretty
