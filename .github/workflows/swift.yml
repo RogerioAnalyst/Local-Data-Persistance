@@ -11,12 +11,20 @@ on:
 
 jobs:
   build:
-
     runs-on: macos-latest
 
     steps:
     - uses: actions/checkout@v4
-    - name: Build
-      run: swift build -v
+
+    - name: Set up Xcode
+      run: |
+        sudo xcode-select -s /Applications/Xcode_12.5.app/Contents/Developer # Adjust Xcode version if needed
+        sudo xcodebuild -version # Verify Xcode version
+
+    - name: Build the project
+      run: |
+        xcodebuild -scheme YourSchemeName -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 11' clean build
+
     - name: Run tests
-      run: swift test -v
+      run: |
+        xcodebuild test -scheme YourSchemeName -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 11' | xcpretty
